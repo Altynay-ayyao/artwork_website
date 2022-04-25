@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -14,8 +15,61 @@ body {
   height: auto;
 }
 
-.welcome {
+.header {
   font-weight: lighter;
-  text-align: center;
+  display: flex;
   margin: 50px;
+  background-color: #180A0A;
+  height: 100px;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Titillium Web',
+  sans-serif;
 }
+
+.artlist {
+  width: 910vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+
+
+@media screen and (min-width:768px){
+  .artlist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.art {
+  background-color: #fff;
+  padding: 2rem 3rem;
+}
+
+.art:hover {
+  background-color:#fff;
+ /*  border: solid #180A0A 1px; */
+  box-shadow: 5px 10px 18px #180a0a26;
+  cursor: pointer;
+}
+
+.art h1 {
+  margin-top: 0.5rem;
+  color: #180A0A;
+}
+
+.name {
+  font-size:1.8rem;
+  font-weight: normal;
+}
+
+.acrylic, .size
+ {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+

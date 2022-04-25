@@ -4,8 +4,9 @@ import './style.css';
 
 const Art = () => {
   return (
-    <div>
+    <div className="art">
       <Image></Image>
+      <Price />
       <Title />
       <Description />
       <Size />
@@ -16,8 +17,9 @@ const Image = () => {
   return <img src={door} alt="" className="door" />;
 };
 
-const Title = () => <h3>The door</h3>;
-const Description = () => <p>Acylic painting</p>;
-const Size = () => <p>50 * 50 cm</p>;
+const Title = () => <h1 className="name">The door</h1>;
+const Price = () => <h1 className="price">1000€</h1>;
+const Description = () => <h1 className="acrylic">Acrylic painting</h1>;
+const Size = () => <h1 className="size">50 * 50 cm</h1>;
 
 export default Art;

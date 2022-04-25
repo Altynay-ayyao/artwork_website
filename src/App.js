@@ -1,18 +1,12 @@
-import Art from './Art';
 import './style.css';
+import Header from './Header';
+import ArtList from './ArtList';
 
 function App() {
   return (
     <div>
-      <h1>
-        <h1 className="welcome">Welcome to my website</h1>
-        <Art />
-        <Art />
-        <Art />
-        <Art />
-        <Art />
-        <Art />
-      </h1>
+      <Header />
+      <ArtList />
     </div>
   );
 }
