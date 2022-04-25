@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f8;
+  color: #222;
+}
+
+.door {
+  width: 300px;
+  height: auto;
+}
+
+.welcome {
+  font-weight: lighter;
+  text-align: center;
+  margin: 50px;
+}
