@@ -19,59 +19,166 @@ import woman from './images/woman.jpg';
 import './style.css';
 import Header from './Header';
 
+//setup object
+const arts = [
+  {
+    id: 1,
+    img: door,
+    price: '500€',
+    title: 'The door',
+    desc: 'Acrylic painting',
+    size: '50cm * 50cm',
+  },
+  {
+    id: 2,
+    img: flower,
+    price: '500€',
+    title: 'The Flower',
+    desc: 'Acrylic painting',
+    size: '40cm * 50cm',
+  },
+  {
+    id: 4,
+    img: ladies,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 5,
+    img: loneliness,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 6,
+    img: ovisilmi,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 7,
+    img: passion,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 8,
+    img: sea_world,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 9,
+    img: sense_and_sensibility,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 10,
+    img: sensibility,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 11,
+    img: sense,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 12,
+    img: summer,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 13,
+    img: untitled1,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 14,
+    img: untitled2,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 15,
+    img: why_so_serious,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+  {
+    id: 16,
+    img: woman,
+    price: '900€',
+    title: 'Ladies',
+    desc: 'Acrylic painting',
+    size: '80cm * 100cm',
+  },
+];
+
 function ArtList() {
   return (
     <section className="artlist">
-      <Art
-        img={firstArt.img}
-        title={firstArt.title}
-        price={firstArt.price}
-        desc={firstArt.desc}
-        size={firstArt.size}
-      />
-      <Art
-        img={secondArt.img}
-        title={secondArt.title}
-        price={secondArt.price}
-        desc={secondArt.desc}
-        size={secondArt.size}
-      />
-      <Art />
-      <Art />
-      <Art />
-      <Art />
-      <Art />
-      <Art />
-      <Art />
+      {arts.map((art, index) => {
+        return <Art key={art.id} {...art} />;
+      })}
     </section>
   );
 }
-//setup object
-const firstArt = {
-  img: door,
-  price: '500€',
-  title: 'The door',
-  desc: 'Acrylic painting',
-  size: '50cm * 50cm',
-};
 
-const secondArt = {
-  img: flower,
-  price: '500€',
-  title: 'The Flower',
-  desc: 'Acrylic painting',
-  size: '40cm * 50cm',
-};
-//setup vars
+const Art = (props) => {
+  //attribute, eventHandler
+  //onClick, onMouseOver
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
+    alert('hello world');
+  };
 
-const Art = ({ img, price, title, desc, size }) => {
+  const { img, price, title, desc, size } = props;
   return (
-    <article className="art">
+    <article
+      className="art"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
       <img src={img} className="door" alt="" />
       <h1>{title}</h1>
       <h1>{price}</h1>
       <p>{desc}</p>
       <p>{size}</p>
+      <button type="button" onClick={clickHandler}>
+        reference example
+      </button>
+      <button type="button">More complex example</button>
     </article>
   );
 };
