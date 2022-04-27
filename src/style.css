@@ -57,19 +57,21 @@ body {
   cursor: pointer;
 }
 
-.art h1 {
+.art h1  {
   margin-top: 0.5rem;
   color: #180A0A;
 }
 
-.name {
-  font-size:1.8rem;
-  font-weight: normal;
+.art h2 {
+  margin:5px 0;
+  font-size: medium;
+  color: #180A0A;
+}
+.art p {
+  margin: 5px 0;
 }
 
-.acrylic, .size
- {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
+
+
+
 
